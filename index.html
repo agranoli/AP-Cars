@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <link rel="AP logo" href="https://imgur.com/a/6YJoFne"/>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+          integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+          crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+            integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+            crossorigin=""></script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <title>AP Cars</title>
+</head>
+    <body>
+        <div class="main">
+            <div class="header">
+                <div class="hleft">
+                    <img src="./images/logo.png" alt="Logo" class="hlogo">
+                </div>
+                <div class="hright">
+                    <button class="hbutton" onclick="scrollToSection('home')">Sākums</button>
+                    <button class="hbutton" onclick="scrollToSection('services')">Pakalpojumi</button>
+                    <button class="hbutton" onclick="scrollToSection('prices')">Cenas</button>
+                    <button class="hbutton" onclick="scrollToSection('contacts')">Kontakti</button>
+                </div>
+                <div class="toggle-button">
+                    <button class="toggle-icon">
+                        <img src="./SVG/burger.svg" alt="burger menu" class="burger-svg">
+                    </button>
+                </div>
+            </div>
+
+            <div class="header-slide">
+                <div class="close-button">
+                    <button class="close-icon">
+                        <img src="./SVG/close.svg" alt="close" class="close-icon">
+                    </button>
+                </div>
+                <div class="hleft-slide">
+                    <img src="./images/logo.png" alt="Logo" class="hlogo">
+                </div>
+                <div class="hright-slide">
+                    <button class="hbutton" onclick="scrollToSection('home')">Sākums</button>
+                    <button class="hbutton" onclick="scrollToSection('services')">Pakalpojumi</button>
+                    <button class="hbutton" onclick="scrollToSection('prices')">Cenas</button>
+                    <button class="hbutton" onclick="scrollToSection('contacts')">Kontakti</button>
+                </div>
+            </div>
+            <div id="home" class="back-img-cont">
+                <img src="./images/ap-back.png" alt="background" class="back-img">
+                <img src="./images/logo.png" alt="logo" class="back-logo">
+            </div>
+            <div id="services" class="services">
+                <div class="division">
+                    <div class="division-line"></div>
+                    <div class="services-head">PAKALPOJUMI</div>
+                    <div class="division-line"></div>
+                </div>
+                <div class="services-sub">
+                    <div class="service">
+                        <p class="service-p">Auto Remonts</p>
+                        <img src="./SVG/Remonts.svg" alt="RemontsSVG" class="service-svg">
+                    </div>
+                    <div class="service">
+                        <p class="service-p">Datordiagnostika</p>
+                        <img src="./SVG/Datordiagnostika.svg" alt="DiagnostikaSVG" class="service-svg">
+                    </div>
+                    <div class="service">
+                        <p class="service-p">Elektronika</p>
+                        <img src="./SVG/Elektronika.svg" alt="ElektronikaSVG" class="service-svg">
+                    </div>
+                </div>
+            </div>
+            <div id="prices" class="prices">
+                <div class="division">
+                    <div class="division-line"></div>
+                    <div class="services-head">CENAS</div>
+                    <div class="division-line"></div>
+                </div>
+                <div class="prices-sub">
+                    <div class="price">
+                        <div class="price-cont">
+                            <p class="price1">Auto Remonts</p>
+                            <div class="price-price">
+                                <p class="price-price-p">40Eur/1h + pvn</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="price-p">
+                        <p class="p-price">
+                            Darba stundas tiek aprēķinātas pēc HAYNES Pro servisa programatūras katram auto un veicamajam darbam individuāli pēc auto markas un modeļa.
+                        </p>
+                    </div>
+                    <div class="price">
+                        <div class="price-cont">
+                            <p class="price2">Datordiagnostika</p>
+                            <div class="price-price">
+                                <p class="price-price-p">35Eur/1h + pvn</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tow-truck">
+                <a href="https://pilsetasevakuators.lv/">
+                    <img class="tow-img" src="./images/pilsetas-e.png" alt="tow">
+                </a>
+                <div class="tow-p">
+                    <p class="tow-p1">24/7 AUTOEVAKUATORS GRŪTĀKAJOS BRĪŽOS UZ CEĻA!</p>
+                    <p class="tow-p2">AUGSTAS KVALITĀTES AUTOEVAKUATORA PAKALPOJUMI!</p>
+                    <p class="tow-p3">+371 26338015</p>
+                </div>
+            </div>
+            <footer id="contacts" class="footer">
+                <div class="division">
+                    <div class="division-footer"></div>
+                    <div class="footer-head">KONTAKTI</div>
+                    <div class="division-footer"></div>
+                </div>
+                <div class="footer-subs">
+                    <div class="footer-sub">
+                        <form id="contactForm">
+                            <h2>Sazinies ar mums!</h2>
+                            <p class="p" type="Vārds:">
+                                <input type="text" id="user_name" name="user_name" placeholder="Lūdzu ievadiet savu vārdu.">
+                                <span id="nameError" class="error"></span>
+                            </p>
+                            <p class="p" type="E-pasts:">
+                                <input type="email" id="user_email" name="user_email" placeholder="Lūdzu ievadiet savu E-pastu.">
+                                <span id="emailError" class="error"></span>
+                            </p>
+                            <p class="p" type="Ziņa:">
+                                <input id="message" name="message" placeholder="Ko jūs vēlētos uzzināt?"></input>
+                                <span id="messageError" class="error"></span>
+                            </p>
+                            <input class="button" type="submit" value="Sūtīt ziņu">
+                        </form>
+                    </div>
+                    <div class="footer-map">
+                        <p class="map-p">Kur mēs atrodamies?</p>
+                        <div id="map">
+                            <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+                            <script>
+                                var map = L.map('map', {
+                                    center: [56.930837670917754, 24.093745589042552],
+                                    zoom: 15,
+                                    zoomControl: false
+                                });
+
+                                // Create a custom icon
+                                var customIcon = L.icon({
+                                    iconUrl: './images/marker.png',
+                                    iconSize: [100, 95], // size of the icon
+                                    iconAnchor: [50, 94], // point of the icon which will correspond to marker's location
+                                    // popupAnchor: [-3, -76] // point from which the popup should open relative to the iconAnchor
+                                });
+
+                                // Add the tile layer
+                                L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                                    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                                }).addTo(map);
+
+                                L.marker([56.930837670917754, 24.093745589042552], {icon: customIcon}).addTo(map);
+                            </script>
+
+                        </div>
+                    </div>
+                    <div class="footer-sub">
+                        <div class="svg-text">
+                            <img src="./SVG/Home.svg" alt="home" class="footer-svg">
+                            <p class="footer-text">Rīga, Pārdaugava, Vienības gatve 20c</p>
+                        </div>
+                        <div class="svg-text">
+                            <img src="./SVG/Phone.svg" alt="phone" class="footer-svg">
+                            <p class="footer-text">+371 26690648</p>
+                        </div>
+                        <div class="svg-text">
+                            <img src="./SVG/Mail.svg" alt="mail" class="footer-svg">
+                            <p class="footer-text">apcars@apcars.lv</p>
+                        </div>
+                        <div class="svg-text">
+                            <a href="https://www.instagram.com/apcarslv/">
+                                <img src="./SVG/Instagram.svg" alt="Instagram" class="footer-svg">
+                            </a>
+                            <a href="https://www.facebook.com/apcars.lv">
+                                <img src="./SVG/Facebook.svg" alt="Facebook" class="footer-svg">
+                            </a>
+                            <a href="https://www.youtube.com/@apcars5927">
+                                <img src="./SVG/Youtube.svg" alt="Youtube" class="footer-svg">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <script src="./Script.js"></script>
+    </body>
+</html>
