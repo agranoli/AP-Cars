@@ -242,7 +242,7 @@ body, html {
     justify-content: center;
     border: 4px solid #A10A0A;
     border-radius: 10px;
-    background-image: url("./images/check1.jpeg");
+    background-image: url("./Images/check1.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
     box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
